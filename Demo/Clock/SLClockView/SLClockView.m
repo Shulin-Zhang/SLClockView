@@ -138,14 +138,14 @@
 #pragma mark - Setter & Getter
 //------------------------------------------------------------------------------
 
-- (void)setClockBackgrondImage:(UIImage *)clockBackgrondImage {
-    if (!clockBackgrondImage) {
+- (void)setClockBackgroundImage:(UIImage *)clockBackgroundImage {
+    if (!clockBackgroundImage) {
         return;
     }
     
-    _clockBackgrondImage = clockBackgrondImage;
+    _clockBackgroundImage = clockBackgroundImage;
     
-    self.layer.contents = (__bridge id)clockBackgrondImage.CGImage;
+    self.layer.contents = (__bridge id)clockBackgroundImage.CGImage;
 }
 
 @end

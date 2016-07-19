@@ -10,7 +10,7 @@
 
 @interface SLClockView : UIView
 
-@property (strong, nonatomic, nullable) UIImage *clockBackgrondImage;
+@property (strong, nonatomic, nullable) UIImage *clockBackgroundImage;
 
 
 - (void)startClockAtNow;
