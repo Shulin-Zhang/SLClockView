@@ -41,7 +41,7 @@
 #pragma mark - Public Mehtod
 //------------------------------------------------------------------------------
 
-- (void)startClockAtHour:(CGFloat)hour minute:(CGFloat)minute second:(CGFloat)second {
+- (void)startClockAtHour:(NSUInteger)hour minute:(NSUInteger)minute second:(NSUInteger)second {
     [self.secondPointer removeAnimationForKey:@"second"];
     [self.minutePointer removeAnimationForKey:@"minute"];
     [self.hourPointer removeAnimationForKey:@"hour"];

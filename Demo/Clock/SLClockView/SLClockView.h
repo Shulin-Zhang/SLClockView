@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)startClockAtNow;
 
-- (void)startClockAtHour:(CGFloat)hour minute:(CGFloat)minute second:(CGFloat)second;
+- (void)startClockAtHour:(NSUInteger)hour minute:(NSUInteger)minute second:(NSUInteger)second;
 
 - (void)startClockAtDate:(NSDate *)date;
 
