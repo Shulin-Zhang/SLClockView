@@ -13,8 +13,8 @@
 		F94276FF1D38C7D800875791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94276FD1D38C7D800875791 /* Main.storyboard */; };
 		F94277011D38C7D800875791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94277001D38C7D800875791 /* Assets.xcassets */; };
 		F94277041D38C7D800875791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94277021D38C7D800875791 /* LaunchScreen.storyboard */; };
-		F942770D1D38C82800875791 /* SLClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = F942770C1D38C82800875791 /* SLClockView.m */; };
 		F94277131D38D9A700875791 /* c.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F94277121D38D9A700875791 /* c.jpeg */; };
+		F9F2200C1D3DB7E900D50E68 /* SLClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F2200B1D3DB7E900D50E68 /* SLClockView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		F94277001D38C7D800875791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F94277031D38C7D800875791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F94277051D38C7D800875791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F942770B1D38C82800875791 /* SLClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLClockView.h; sourceTree = "<group>"; };
-		F942770C1D38C82800875791 /* SLClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLClockView.m; sourceTree = "<group>"; };
 		F94277121D38D9A700875791 /* c.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpeg; sourceTree = "<group>"; };
+		F9F2200A1D3DB7E900D50E68 /* SLClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLClockView.h; sourceTree = "<group>"; };
+		F9F2200B1D3DB7E900D50E68 /* SLClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLClockView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +63,11 @@
 		F94276F31D38C7D800875791 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				F9F220091D3DB7E900D50E68 /* SLClockView */,
 				F94276F71D38C7D800875791 /* AppDelegate.h */,
 				F94276F81D38C7D800875791 /* AppDelegate.m */,
 				F94276FA1D38C7D800875791 /* ViewController.h */,
 				F94276FB1D38C7D800875791 /* ViewController.m */,
-				F942770B1D38C82800875791 /* SLClockView.h */,
-				F942770C1D38C82800875791 /* SLClockView.m */,
 				F94276FD1D38C7D800875791 /* Main.storyboard */,
 				F94277121D38D9A700875791 /* c.jpeg */,
 				F94277001D38C7D800875791 /* Assets.xcassets */,
@@ -85,6 +84,15 @@
 				F94276F51D38C7D800875791 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9F220091D3DB7E900D50E68 /* SLClockView */ = {
+			isa = PBXGroup;
+			children = (
+				F9F2200A1D3DB7E900D50E68 /* SLClockView.h */,
+				F9F2200B1D3DB7E900D50E68 /* SLClockView.m */,
+			);
+			path = SLClockView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F94276FC1D38C7D800875791 /* ViewController.m in Sources */,
-				F942770D1D38C82800875791 /* SLClockView.m in Sources */,
 				F94276F91D38C7D800875791 /* AppDelegate.m in Sources */,
+				F9F2200C1D3DB7E900D50E68 /* SLClockView.m in Sources */,
 				F94276F61D38C7D800875791 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
