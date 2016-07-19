@@ -4,7 +4,7 @@
 @property (strong, nonatomic, nullable) UIImage *clockBackgroundImage;
 
 - (void)startClockAtNow;
-- (void)startClockAtHour:(CGFloat)hour minute:(CGFloat)minute second:(CGFloat)second;
+- (void)startClockAtHour:(NSUInteger)hour minute:(NSUInteger)minute second:(NSUInteger)second
 - (void)startClockAtDate:(NSDate *)date;
 - (void)pauseClock;
 - (void)resumeClock;
