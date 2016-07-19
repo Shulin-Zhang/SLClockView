@@ -41,15 +41,6 @@
 #pragma mark - Public Mehtod
 //------------------------------------------------------------------------------
 
-- (void)startClockAtNow {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dates = [calendar components:NSCalendarUnitHour |
-                               NSCalendarUnitMinute |
-                               NSCalendarUnitSecond fromDate:[NSDate date]];
-    
-    [self startClockAtHour:dates.hour minute:dates.minute second:dates.second];
-}
-
 - (void)startClockAtHour:(CGFloat)hour minute:(CGFloat)minute second:(CGFloat)second {
     [self.secondPointer removeAnimationForKey:@"second"];
     [self.minutePointer removeAnimationForKey:@"minute"];
@@ -84,9 +75,40 @@
     hourAnimation.removedOnCompletion = NO;
     hourAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     hourAnimation.duration = 60 * 60 * 12;
-    hourAnimation.fromValue = @(((hour + minute / 60.0 + second / 3600.0)/ 12) * (2 * M_PI));
+    hourAnimation.fromValue = @(((hour + minute / 60.0 + second / 3600.0)/ 12.0) * (2 * M_PI));
     hourAnimation.byValue = @(2 * M_PI);
     [self.hourPointer addAnimation:hourAnimation forKey:@"hour"];
+}
+
+- (void)startClockAtNow {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dates = [calendar components:NSCalendarUnitHour |
+                               NSCalendarUnitMinute |
+                               NSCalendarUnitSecond fromDate:[NSDate date]];
+    
+    [self startClockAtHour:dates.hour minute:dates.minute second:dates.second];
+}
+
+- (void)startClockAtDate:(NSDate *)date {
+    if (!date) {
+        return;
+    }
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"HH:mm:ss";
+    NSString *dateString = [formatter stringFromDate:date];
+    NSArray *dateArray = [dateString componentsSeparatedByString:@":"];
+    
+    CGFloat hour = 0;
+    CGFloat minute = 0;
+    CGFloat second = 0;
+    if (dateArray.count == 3) {
+        hour = [dateArray[0] floatValue];
+        minute = [dateArray[1] floatValue];
+        second = [dateArray[2] floatValue];
+    }
+    
+    [self startClockAtHour:hour minute:minute second:second];
 }
 
 - (void)pauseClock {

@@ -41,6 +41,7 @@
     self.clock = clockView;
     
     [clockView startClockAtNow];
+//    [clockView startClockAtDate:[NSDate date]];
 }
 
 - (void)resumeButtonAction {
