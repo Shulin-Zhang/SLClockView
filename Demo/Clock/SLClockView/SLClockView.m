@@ -148,6 +148,10 @@
 }
 
 - (void)resumeLayer:(CALayer *)layer {
+    if (layer.speed != 0.0) {
+        return;
+    }
+    
     CFTimeInterval pausedTime = [layer timeOffset];
     layer.speed = 1.0;
     layer.timeOffset = 0.0;
